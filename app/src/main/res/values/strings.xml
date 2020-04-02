@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyApp1</string>
+    <string name="tvIntro">Bienvenido</string>
+    <string name="tvNombre">Nombre(s)</string>
+    <string name="tvPaterno">Apellido Paterno</string>
+    <string name="etFecha">Fecha de nacimiento</string>
+</resources>
