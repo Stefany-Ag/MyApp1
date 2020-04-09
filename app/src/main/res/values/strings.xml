@@ -1,7 +1,17 @@
 <resources>
-    <string name="app_name">MyApp1</string>
-    <string name="tvIntro">Bienvenido</string>
-    <string name="tvNombre">Nombre(s)</string>
-    <string name="tvPaterno">Apellido Paterno</string>
+    <string name="tvIntro">Introduzca sus datos</string>
+    <string name="tvInst">Escoja una opción</string>
+    <string name="tvRFC">Su RFC es:</string>
+    <string name="etNombre">Nombre(s)</string>
+    <string name="etApellido">Apellidos</string>
     <string name="etFecha">Fecha de nacimiento</string>
+    <string name="btnListo">Listo</string>
+    <string name="btnRFC">RFC</string>
+    <string name="btnHoros">Signo de Zodiaco</string>
+    <string name="btnChino">Año Chino</string>
+    <string name="alertaDatos">Por favor revise sus datos</string>
+    <string name="exitoso">Proceso exitoso</string>
+    <string name="reqDatos">Obligatorio</string>
+    <string name="onPausa">Pausado</string>
+    <string name="onRest">Reinicio</string>
 </resources>

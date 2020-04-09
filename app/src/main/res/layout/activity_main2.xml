@@ -4,6 +4,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main2Activity">
+    android:background="@drawable/moon"
+    tools:context=".MainActivity2">
 
+    <Button
+        android:id="@+id/btnRFC"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="168dp"
+        android:layout_height="45dp"
+        android:background="@color/DeepPink"
+        android:text="@string/btnRFC"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/Black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+    <Button
+        android:id="@+id/btnHoros"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="168dp"
+        android:layout_height="45dp"
+        android:background="@color/DeepPink"
+        android:text="@string/btnHoros"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/Black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+    <Button
+        android:id="@+id/btnChino"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="168dp"
+        android:layout_height="45dp"
+        android:background="@color/DeepPink"
+        android:text="@string/btnChino"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/Black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="215dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="315dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="415dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="515dp" />
+
+    <TextView
+        android:id="@+id/tvInst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvInst"
+        android:textColor="@color/Aqua"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.982" />
 </androidx.constraintlayout.widget.ConstraintLayout>

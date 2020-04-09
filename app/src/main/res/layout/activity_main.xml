@@ -29,6 +29,13 @@
         app:layout_constraintGuide_begin="405dp" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="598dp" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,26 +44,27 @@
 
     <EditText
         android:id="@+id/etFecha"
-        android:hint="@string/etFecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:fontFamily="sans-serif"
-        android:inputType="date"
-        android:focusable="false"
         android:clickable="true"
-        android:maxLines="1"
+        android:focusable="false"
+        android:fontFamily="sans-serif"
+        android:text="@string/etFecha"
         android:textColor="@color/MintCream"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
-    <TextView
-        android:id="@+id/tvNombre"
+    <EditText
+        android:id="@+id/etNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tvNombre"
+        android:clickable="true"
+        android:focusable="false"
+        android:fontFamily="sans-serif"
+        android:text="@string/etNombre"
         android:textColor="@color/MintCream"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
@@ -64,11 +72,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
-    <TextView
-        android:id="@+id/tvPaterno"
+    <EditText
+        android:id="@+id/etApellido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tvPaterno"
+        android:clickable="true"
+        android:focusable="false"
+        android:fontFamily="sans-serif"
+        android:text="@string/etApellido"
         android:textColor="@color/MintCream"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
@@ -82,10 +93,20 @@
         android:layout_height="wrap_content"
         android:text="@string/tvIntro"
         android:textColor="@color/MintCream"
-        android:textSize="40sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnListo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnListo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

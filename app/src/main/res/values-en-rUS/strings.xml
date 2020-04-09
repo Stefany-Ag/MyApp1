@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MyApp1</string>
     <string name="tvIntro">Welcome</string>
-    <string name="tvNombre">Name(s)</string>
-    <string name="tvPaterno">Last Name</string>
     <string name="etFecha">Birthdate</string>
+    <string name="etNombre">Name(s)</string>
+    <string name="btnListo">Ready</string>
+    <string name="btnRFC">TIN</string>
+    <string name="btnHoros">Zodiac Sign</string>
+    <string name="btnChino">Chinese Year</string>
+    <string name="tvRFC">Your TIN is:</string>
+    <string name="tvInst">Choose an option</string>
+    <string name="alertaDatos">Please check your data</string>
+    <string name="exitoso">Sucessfull process</string>
+    <string name="reqDatos">Required</string>
+    <string name="onPausa">Paused</string>
+    <string name="onRest">Restarted</string>
+    <string name="etApellido">Last Name</string>
 </resources>
