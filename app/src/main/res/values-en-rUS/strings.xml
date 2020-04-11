@@ -12,7 +12,6 @@
     <string name="alertaDatos">Please check your data</string>
     <string name="exitoso">Sucessfull process</string>
     <string name="reqDatos">Required</string>
-    <string name="onPausa">Paused</string>
-    <string name="onRest">Restarted</string>
-    <string name="etApellido">Last Name</string>
+    <string name="etApellido1">F. Last Name</string>
+    <string name="etApellido2">M. Last Name</string>
 </resources>

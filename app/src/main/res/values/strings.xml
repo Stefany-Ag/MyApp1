@@ -3,7 +3,8 @@
     <string name="tvInst">Escoja una opción</string>
     <string name="tvRFC">Su RFC es:</string>
     <string name="etNombre">Nombre(s)</string>
-    <string name="etApellido">Apellidos</string>
+    <string name="etApellido1">Apellido Paterno</string>
+    <string name="etApellido2">Apellido Materno</string>
     <string name="etFecha">Fecha de nacimiento</string>
     <string name="btnListo">Listo</string>
     <string name="btnRFC">RFC</string>
@@ -12,6 +13,4 @@
     <string name="alertaDatos">Por favor revise sus datos</string>
     <string name="exitoso">Proceso exitoso</string>
     <string name="reqDatos">Obligatorio</string>
-    <string name="onPausa">Pausado</string>
-    <string name="onRest">Reinicio</string>
 </resources>

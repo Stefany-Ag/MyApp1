@@ -14,10 +14,12 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    EditText etFecha, etNombre, etApellido;
+    EditText etFecha, etNombre, etApPat, etApMat;
     MediaPlayer mp;
     Button btnListo;
-    Usuario usuario;
+    String adv = getResources().getString(R.string.alertaDatos);
+    String error = getResources().getString(R.string.reqDatos);
+    String exito = getResources().getString(R.string.exitoso);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,19 +31,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         etFecha = findViewById(R.id.etFecha);
         etFecha.setOnClickListener(this);
         etNombre = findViewById(R.id.etNombre);
-        etApellido = findViewById(R.id.etApellido);
+        etApPat = findViewById(R.id.etApPat);
+        etApMat = findViewById(R.id.etApMat);
         btnListo = findViewById(R.id.btnListo);
         btnListo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(etFecha.getText().length()==0){
-                    Toast.makeText(MainActivity.this, "@string/alertaDatos", Toast.LENGTH_LONG).show();
-                    etFecha.setError("@string/reqDatos");
-                }
-                else{
+                String nombre = etNombre.getText().toString();
+                String apellidoPaterno = etApPat.getText().toString();
+                String apellidoMaterno = etApMat.getText().toString();
+                if (etFecha.getText().length() !=0 && etNombre.getText().length() !=0 && etApPat.getText().length()!=0){
+                    Bundle bundle = new Bundle();
+                    bundle.putString("nombre", nombre);
+                    bundle.putString("apellidoPaterno", apellidoPaterno);
+                    bundle.putString("apellidoMaterno", apellidoMaterno);
                     Intent intent = new Intent(MainActivity.this,MainActivity2.class);
+                    Toast.makeText(MainActivity.this, exito, Toast.LENGTH_LONG).show();
+                    intent.putExtras(bundle);
                     startActivity(intent);
-                    Toast.makeText(MainActivity.this, "@string/exitoso", Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(MainActivity.this, adv, Toast.LENGTH_LONG).show();
+                    etFecha.setError(error);
                 }
             }
         });
@@ -49,22 +59,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        switch(view.getId()) {
-            case R.id.etFecha:
-                showDatePickerDialog();
-            case R.id.btnListo:
-                if(validarFormulario()){
-                    Bundle bundle = new Bundle();
-                    bundle.putSerializable("usuario", usuario);
-                    Intent intent = new Intent(MainActivity.this,MainActivity2.class);
-                    intent.putExtras(bundle);
-                    startActivity(intent);
-                }else{
-                    Toast.makeText(MainActivity.this, "@string/alertaDatos", Toast.LENGTH_LONG).show();
-                }
-                break;
-            default:
-                break;
+        if (view.getId() == R.id.etFecha) {
+            showDatePickerDialog();
         }
     }
 
@@ -74,36 +70,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onDateSet(DatePicker datePicker, int anio, int mes, int dia) {
                 final String fechaSeleccionada = dia + " / " + (mes+1) + " / " + anio;
                 etFecha.setText(fechaSeleccionada);
+                String a= Integer.toString(anio);
+                String m= Integer.toString(mes);
+                String d= Integer.toString(dia);
+                Bundle bundle = new Bundle();
+                bundle.putString("año", a);
+                bundle.putString("mes", m);
+                bundle.putString("dia", d);
+                Intent intent = new Intent(MainActivity.this,MainActivity2.class);
+                intent.putExtras(bundle);
             }
         });
         newFragment.show(getSupportFragmentManager(), "datePicker");
-    }
-
-    private boolean validarFormulario(){
-        if(etNombre.getText().toString().isEmpty()){
-            Toast.makeText(MainActivity.this, "@string/alertaDatos", Toast.LENGTH_LONG).show();
-            return false;
-        }else{
-            if (etApellido.getText().toString().isEmpty()){
-                Toast.makeText(MainActivity.this, "@string/alertaDatos", Toast.LENGTH_LONG).show();
-                return false;
-            }
-        }
-        return true;
     }
 
     @Override
     protected void onPause(){
         super.onPause();
         mp.pause();
-        Toast.makeText(MainActivity.this, "@string/onPausa",Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, "onPause",Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onRestart(){
         super.onRestart();
         mp.start();
-        Toast.makeText(MainActivity.this, "@string/onRest",Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, "onRestart",Toast.LENGTH_SHORT).show();
     }
 
     @Override
