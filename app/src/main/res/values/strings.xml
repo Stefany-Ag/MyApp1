@@ -9,7 +9,9 @@
     <string name="btnListo">Listo</string>
     <string name="btnRFC">RFC</string>
     <string name="btnHoros">Signo de Zodiaco</string>
+    <string name="tvHoros">Su signo zodiacal es:</string>
     <string name="btnChino">Año Chino</string>
+    <string name="tvChino">Su año chino es:</string>
     <string name="alertaDatos">Por favor revise sus datos</string>
     <string name="exitoso">Proceso exitoso</string>
     <string name="reqDatos">Obligatorio</string>

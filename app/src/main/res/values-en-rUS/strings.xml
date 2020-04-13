@@ -14,4 +14,6 @@
     <string name="reqDatos">Required</string>
     <string name="etApellido1">F. Last Name</string>
     <string name="etApellido2">M. Last Name</string>
+    <string name="tvHoros">Your zodiac sign is:</string>
+    <string name="tvChino">Your chinese year is:</string>
 </resources>
