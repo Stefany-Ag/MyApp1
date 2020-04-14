@@ -7,6 +7,25 @@
     android:background="@drawable/sunset"
     tools:context=".MainActivity" >
 
+    <EditText
+        android:id="@+id/etApellidoMaterno"
+        android:layout_width="167dp"
+        android:layout_height="40dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="sans-serif"
+        android:hint="@string/feedbackname"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/MintCream"
+        android:textColorHint="@color/AliceBlue"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        android:importantForAutofill="no" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
@@ -44,65 +63,61 @@
 
     <EditText
         android:id="@+id/etFecha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="167dp"
+        android:layout_height="40dp"
         android:clickable="true"
         android:focusable="false"
         android:fontFamily="sans-serif"
-        android:text="@string/etFecha"
+        android:hint="@string/feedbackname"
+        android:textAlignment="center"
         android:textColor="@color/MintCream"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        android:textColorHint="@color/AliceBlue"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline13"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        android:importantForAutofill="no"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/etNombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="167dp"
+        android:layout_height="40dp"
         android:clickable="true"
-        android:focusable="false"
+        android:focusable="true"
         android:fontFamily="sans-serif"
-        android:text="@string/etNombre"
+        android:hint="@string/feedbackname"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
         android:textColor="@color/MintCream"
-        android:textSize="20sp"
+        android:textColorHint="@color/AliceBlue"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="0.411"
+        android:importantForAutofill="no" />
 
     <EditText
-        android:id="@+id/etApPat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/etApellidoPaterno"
+        android:layout_width="167dp"
+        android:layout_height="40dp"
         android:clickable="true"
-        android:focusable="false"
+        android:focusable="true"
         android:fontFamily="sans-serif"
-        android:text="@string/etApellido1"
+        android:hint="@string/feedbackname"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
         android:textColor="@color/MintCream"
-        android:textSize="20sp"
+        android:textColorHint="@color/AliceBlue"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline5" />
-
-    <EditText
-        android:id="@+id/etApMat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="false"
-        android:fontFamily="sans-serif"
-        android:text="@string/etApellido2"
-        android:textColor="@color/MintCream"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/tvIntro"
@@ -118,13 +133,75 @@
 
     <Button
         android:id="@+id/btnListo"
-        android:layout_width="138dp"
-        android:layout_height="52dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/btnListo"
-        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvNombre"
+        android:textColor="@color/MintCream"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="470dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="193dp" />
+
+    <TextView
+        android:id="@+id/tvApellidoPaterno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvApellidoPaterno"
+        android:textColor="@color/MintCream"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+    <TextView
+        android:id="@+id/tvApellidoMaterno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvApellidoMaterno"
+        android:textColor="@color/MintCream"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline14"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/tvFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvFecha"
+        android:textColor="@color/MintCream"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline13"
+        app:layout_constraintEnd_toStartOf="@+id/guideline14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

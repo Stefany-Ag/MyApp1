@@ -13,16 +13,16 @@ public class MainActivity3 extends AppCompatActivity {
     String nombre = getIntent().getStringExtra("nombre");
     String apellidoPaterno = getIntent().getStringExtra("apellidoPaterno");
     String apellidoMaterno = getIntent().getStringExtra("apellidoMaterno");
-    private final String anio = getIntent().getStringExtra("año");
-    private final String mes = getIntent().getStringExtra("mes");
-    private final String dia = getIntent().getStringExtra("dia");
+    String anio = getIntent().getStringExtra("año");
+    String mes = getIntent().getStringExtra("mes");
+    String dia = getIntent().getStringExtra("dia");
     TextView tvDatoRFC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
-        final String inicio = primerosCuatroCaracteresRFC(nombre, apellidoPaterno, apellidoMaterno);
+        String inicio = primerosCuatroCaracteresRFC(nombre, apellidoPaterno, apellidoMaterno);
         String datoRfc = inicio+anio+mes+dia;
         tvDatoRFC.setText(datoRfc);
     }
@@ -53,7 +53,8 @@ public class MainActivity3 extends AppCompatActivity {
         String letraNom = matcherNom.group(1);
         String rfc;
         if (letraPat.isEmpty() || letraMat.isEmpty()) {
-            //Si no tiene alguno de los apellidos (paterno o materno), se toma la primera y segunda letra del apellido que tiene y el 4to caracter será la segunda letra del nombre.
+            //Si no tiene alguno de los apellidos (paterno o materno), se toma la primera y segunda letra del apellido que tiene
+            //y el 4to caracter será la segunda letra del nombre.
             rfc = (matcherPat.group(1) + matcherMat.group(1)).substring(0,2) + letraNom + matcherNom.group(2);
         }
         else if (matcherPat.group(1).length() > 2)

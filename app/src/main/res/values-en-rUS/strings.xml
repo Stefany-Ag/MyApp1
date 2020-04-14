@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="tvIntro">Welcome</string>
-    <string name="etFecha">Birthdate</string>
-    <string name="etNombre">Name(s)</string>
     <string name="btnListo">Ready</string>
     <string name="btnRFC">TIN</string>
     <string name="btnHoros">Zodiac Sign</string>
@@ -12,8 +10,9 @@
     <string name="alertaDatos">Please check your data</string>
     <string name="exitoso">Sucessfull process</string>
     <string name="reqDatos">Required</string>
-    <string name="etApellido1">F. Last Name</string>
-    <string name="etApellido2">M. Last Name</string>
-    <string name="tvHoros">Your zodiac sign is:</string>
-    <string name="tvChino">Your chinese year is:</string>
+    <string name="tvFecha">Birthdate</string>
+    <string name="tvNombre">Name(s)</string>
+    <string name="tvApellidoPaterno">F. Last Name</string>
+    <string name="tvApellidoMaterno">M. Last Name</string>
+    <string name="feedbackname">Click here</string>
 </resources>
