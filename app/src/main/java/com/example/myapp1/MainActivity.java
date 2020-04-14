@@ -16,15 +16,23 @@ import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    EditText etFecha, etNombre, etApPat, etApMat;
+    public static final String Nombre = "NOMBRE";
+    public static final String apellido1 = "APELLIDOP";
+    public static final String apellido2 = "APELLIDOM";
+    public static final String Dia = "DIA";
+    public static final String Mes = "MES";
+    public static final String Anio = "AÑO";
+    EditText etFecha, etNombre, etApPat,etApMat;
     MediaPlayer mp;
     Button btnListo;
+    String adv, error, exito;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final SampleFragment sampleFragment = new SampleFragment();
 
         mp = MediaPlayer.create(this, R.raw.always);
         mp.start();
@@ -34,6 +42,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         etApPat = findViewById(R.id.etApellidoPaterno);
         etApMat = findViewById(R.id.etApellidoMaterno);
         btnListo = findViewById(R.id.btnListo);
+        adv = getResources().getString(R.string.advertencia);
+        error = getResources().getString(R.string.error);
+        exito = getResources().getString(R.string.exitoso);
         btnListo.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -41,28 +52,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String nombre = etNombre.getText().toString();
                 String apellidoPaterno = etApMat.getText().toString();
                 String apellidoMaterno = etApMat.getText().toString();
-                if (etFecha.getText().length() != 0 && etNombre.getText().length() != 0 && etApPat.getText().length() != 0 && etApMat.getText().length() != 0) {
+                if(etFecha.getText().length()!=0 && etNombre.getText().length() !=0 && etApPat.getText().length() !=0 && etApMat.getText().length() !=0){
                     Bundle bundle = new Bundle();
-                    bundle.putString("nombre", nombre);
-                    bundle.putString("apellidoPaterno", apellidoPaterno);
-                    bundle.putString("apellidoMaterno", apellidoMaterno);
-                    Intent intent = new Intent(MainActivity.this, MainActivity2.class);
-                    Toast.makeText(MainActivity.this, "exito", Toast.LENGTH_LONG).show();
-                    intent.putExtras(bundle);
+                    bundle.putString(Nombre, nombre);
+                    bundle.putString(apellido1, apellidoPaterno);
+                    bundle.putString(apellido2, apellidoMaterno);
+                    sampleFragment.setArguments(bundle);
+                    Intent intent = new Intent(MainActivity.this,MainActivity2.class);
+                    Toast.makeText(MainActivity.this, exito, Toast.LENGTH_LONG).show();
                     startActivity(intent);
-                } else {
-                    Toast.makeText(MainActivity.this, "Revise sus datos", Toast.LENGTH_LONG).show();
-                    if (etNombre.getText().length() == 0) {
-                        etNombre.setError("Falta nombre");
+                }
+                else{
+                    Toast.makeText(MainActivity.this, adv, Toast.LENGTH_LONG).show();
+                    if(etNombre.getText().length()==0) {
+                        etNombre.setError(error);
                     }
                     if (etApPat.getText().length() == 0) {
-                        etApPat.setError("Falta apellido");
+                        etApPat.setError(error);
                     }
                     if (etApMat.getText().length() == 0) {
-                        etApMat.setError("Falta apellido");
+                        etApMat.setError(error);
                     }
                     if (etFecha.getText().length() == 0) {
-                        etFecha.setError("Falta fecha");
+                        etFecha.setError(error);
                     }
                 }
             }
@@ -87,10 +99,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String m = Integer.toString(mes);
                 String d = Integer.toString(dia);
                 Bundle bundle = new Bundle();
-                bundle.putString("año", a);
-                bundle.putString("mes", m);
-                bundle.putString("dia", d);
-                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                bundle.putString(Anio, a);
+                bundle.putString(Mes, m);
+                bundle.putString(Dia, d);
+                Intent intent = new Intent(MainActivity.this,MainActivity2.class);
                 intent.putExtras(bundle);
             }
         });
@@ -107,34 +119,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    protected void onPause() {
+    protected void onPause(){
         super.onPause();
         mp.pause();
     }
 
     @Override
-    protected void onRestart() {
+    protected void onRestart(){
         super.onRestart();
         mp.start();
     }
 
     @Override
-    protected void onResume() {
+    protected void onResume(){
         super.onResume();
     }
 
     @Override
-    protected void onStop() {
+    protected void onStop(){
         super.onStop();
     }
 
     @Override
-    protected void onDestroy() {
+    protected void onDestroy(){
         super.onDestroy();
     }
 
     @Override
-    protected void onStart() {
+    protected void onStart(){
         super.onStart();
     }
 }

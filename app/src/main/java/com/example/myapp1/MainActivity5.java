@@ -2,21 +2,23 @@ package com.example.myapp1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity5 extends AppCompatActivity {
 
-    String anio = getIntent().getStringExtra("año");
-    TextView tvChino;
+    //String anio = getIntent().getStringExtra(MainActivity.Anio);
+    //TextView tvChino;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main5);
-        int anioN = Integer.parseInt(anio);
+       /* int anioN = Integer.parseInt(anio);
         final String horoscopo = getAnimal(anioN);
-        tvChino.setText(horoscopo);
+        tvChino.setText(horoscopo);*/
     }
     public static String getAnimal(int anio){
         String animal = "";
@@ -36,5 +38,10 @@ public class MainActivity5 extends AppCompatActivity {
             case 11: animal = "Cabra"; break;
         }
         return animal;
+    }
+    public void Regresar(View view)
+    {
+        Intent vuelve = new Intent(MainActivity5.this, MainActivity2.class);
+        startActivity(vuelve);
     }
 }

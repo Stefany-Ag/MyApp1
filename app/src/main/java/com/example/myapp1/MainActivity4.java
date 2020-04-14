@@ -2,23 +2,25 @@ package com.example.myapp1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 
 public class MainActivity4 extends AppCompatActivity {
 
-    String mes = getIntent().getStringExtra("mes");
-    String dia = getIntent().getStringExtra("dia");
+    //String mes = getIntent().getStringExtra(MainActivity.Mes);
+    //String dia = getIntent().getStringExtra(MainActivity.Dia);
     EditText etTexto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
-        int diaN = Integer.parseInt(dia);
+        /*int diaN = Integer.parseInt(dia);
         int mesN = Integer.parseInt(mes);
         String signo = getSigno(mesN,diaN);
-        etTexto.setText(signo);
+        etTexto.append(signo);*/
     }
 
     public static String getSigno(int mes, int dia){
@@ -110,5 +112,10 @@ public class MainActivity4 extends AppCompatActivity {
                 break;
         }
         return signo;
+    }
+    public void Regresar(View view)
+    {
+        Intent vuelve = new Intent(MainActivity4.this, MainActivity2.class);
+        startActivity(vuelve);
     }
 }

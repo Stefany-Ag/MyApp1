@@ -2,7 +2,9 @@ package com.example.myapp1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import java.text.Normalizer;
@@ -10,21 +12,21 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class MainActivity3 extends AppCompatActivity {
-    String nombre = getIntent().getStringExtra("nombre");
-    String apellidoPaterno = getIntent().getStringExtra("apellidoPaterno");
-    String apellidoMaterno = getIntent().getStringExtra("apellidoMaterno");
-    String anio = getIntent().getStringExtra("año");
-    String mes = getIntent().getStringExtra("mes");
-    String dia = getIntent().getStringExtra("dia");
+    /*String nombre = getIntent().getStringExtra(Nombre);
+    String apellidoPaterno = getIntent().getStringExtra(MainActivity.apellido1);
+    String apellidoMaterno = getIntent().getStringExtra(MainActivity.apellido2);
+    String anio = getIntent().getStringExtra(MainActivity.Anio);
+    String mes = getIntent().getStringExtra(MainActivity.Mes);
+    String dia = getIntent().getStringExtra(MainActivity.Dia);*/
     TextView tvDatoRFC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
-        String inicio = primerosCuatroCaracteresRFC(nombre, apellidoPaterno, apellidoMaterno);
+        /*String inicio = primerosCuatroCaracteresRFC(nombre, apellidoPaterno, apellidoMaterno);
         String datoRfc = inicio+anio+mes+dia;
-        tvDatoRFC.setText(datoRfc);
+        tvDatoRFC.setText(datoRfc);*/
     }
 
     public static String primerosCuatroCaracteresRFC(String nombre, String apellidoPaterno, String apellidoMaterno)
@@ -53,8 +55,7 @@ public class MainActivity3 extends AppCompatActivity {
         String letraNom = matcherNom.group(1);
         String rfc;
         if (letraPat.isEmpty() || letraMat.isEmpty()) {
-            //Si no tiene alguno de los apellidos (paterno o materno), se toma la primera y segunda letra del apellido que tiene
-            //y el 4to caracter será la segunda letra del nombre.
+            //Si no tiene alguno de los apellidos (paterno o materno), se toma la primera y segunda letra del apellido que tiene y el 4to caracter será la segunda letra del nombre.
             rfc = (matcherPat.group(1) + matcherMat.group(1)).substring(0,2) + letraNom + matcherNom.group(2);
         }
         else if (matcherPat.group(1).length() > 2)
@@ -81,5 +82,11 @@ public class MainActivity3 extends AppCompatActivity {
         s = Normalizer.normalize(s.replaceAll("[Ññ]","&"), Normalizer.Form.NFD);
         s = s.replaceAll("[^&A-Za-z ]", "");
         return s.trim().toUpperCase();
+    }
+    //Metodo para regresar
+    public void Regresar(View view)
+    {
+        Intent vuelve = new Intent(MainActivity3.this, MainActivity2.class);
+        startActivity(vuelve);
     }
 }

@@ -36,15 +36,24 @@
 
     <TextView
         android:id="@+id/tvDatoRFC"
-        android:layout_width="1dp"
-        android:layout_height="29dp"
-        android:text=""
-        android:textColor="@color/Seashell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/Lime"
         android:textSize="35sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline11"
-        app:layout_constraintVertical_bias="0.277" />
+        app:layout_constraintTop_toTopOf="@+id/guideline10" />
+
+    <Button
+        android:id="@+id/btnRegresa1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="88dp"
+        android:onClick="Regresar"
+        android:text="@string/btnRegresa"
+        app:layout_constraintEnd_toStartOf="@+id/tvDatoRFC"
+        app:layout_constraintTop_toTopOf="@+id/guideline11" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

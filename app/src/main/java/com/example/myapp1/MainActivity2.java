@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity2 extends  AppCompatActivity implements View.OnClickListener {
 
     Button btnRFC, btnHoros, btnChino;
 
@@ -15,11 +15,11 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        btnRFC = (Button) findViewById(R.id.btnRFC);
+        btnRFC = findViewById(R.id.btnRFC);
         btnRFC.setOnClickListener(this);
-        btnHoros = (Button) findViewById(R.id.btnHoros);
+        btnHoros = findViewById(R.id.btnHoros);
         btnHoros.setOnClickListener(this);
-        btnChino = (Button) findViewById(R.id.btnChino);
+        btnChino = findViewById(R.id.btnChino);
         btnChino.setOnClickListener(this);
         overridePendingTransition(R.anim.sacar,R.anim.mantener);
     }
@@ -54,5 +54,11 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
     protected void onPause(){
         super.onPause();
         overridePendingTransition(R.anim.mantener,R.anim.sacar);
+    }
+    //Metodo para regresar
+    public void Regresar(View view)
+    {
+        Intent vuelve = new Intent(MainActivity2.this, MainActivity.class);
+        startActivity(vuelve);
     }
 }

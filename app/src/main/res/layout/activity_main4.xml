@@ -14,14 +14,12 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="130dp" />
 
-    <EditText
+    <TextView
         android:id="@+id/etTexto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:importantForAutofill="no"
-        android:inputType="text"
-        android:labelFor="@id/etTexto"
         android:text=""
         android:textAlignment="center"
         android:textColor="@color/MediumSpringGreen"
@@ -46,4 +44,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.966" />
+
+    <Button
+        android:id="@+id/btnRegresa2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="488dp"
+        android:layout_marginEnd="224dp"
+        android:onClick="Regresar"
+        android:text="@string/btnRegresa"
+        app:layout_constraintEnd_toEndOf="@+id/etTexto"
+        app:layout_constraintTop_toTopOf="@+id/guideline12" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

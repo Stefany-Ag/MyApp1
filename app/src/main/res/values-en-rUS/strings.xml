@@ -8,11 +8,18 @@
     <string name="tvRFC">Your TIN is:</string>
     <string name="tvInst">Choose an option</string>
     <string name="alertaDatos">Please check your data</string>
-    <string name="exitoso">Sucessfull process</string>
+    <string name="exitoso">Sucessful process</string>
     <string name="reqDatos">Required</string>
-    <string name="tvFecha">Birthdate</string>
-    <string name="tvNombre">Name(s)</string>
+    <string name="tvHoros">Your zodiac sign is:</string>
+    <string name="tvChino">Your chinese year is:</string>
+    <string name="tvNombre">Name(s):</string>
+    <string name="feedbackname">Click here</string>
     <string name="tvApellidoPaterno">F. Last Name</string>
     <string name="tvApellidoMaterno">M. Last Name</string>
-    <string name="feedbackname">Click here</string>
+    <string name="tvFecha">Birthdate</string>
+    <string name="advertencia">Check your data</string>
+    <string name="error">Missing data</string>
+    <string name="btnRegresa">Back</string>
+    <string name="btnSalir">Repeat</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

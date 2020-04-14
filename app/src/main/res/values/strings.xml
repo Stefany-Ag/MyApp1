@@ -14,4 +14,13 @@
     <string name="alertaDatos">Por favor revise sus datos</string>
     <string name="exitoso">Proceso exitoso</string>
     <string name="reqDatos">Obligatorio</string>
+    <string name="tvHoros">Su signo zodiacal es:</string>
+    <string name="tvChino">Su año chino es:</string>
+    <string name="advertencia">Revise sus datos</string>
+    <string name="error">Faltan datos</string>
+    <string name="btnRegresa">Volver</string>
+    <string name="btnSalir">Repetir</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
