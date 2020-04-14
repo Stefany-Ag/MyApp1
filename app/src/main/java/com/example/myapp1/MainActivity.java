@@ -1,11 +1,14 @@
 package com.example.myapp1;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -74,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void showDatePickerDialog() {
+        escondeTeclado(this);
         DatePickerFragment newFragment = DatePickerFragment.newInstance(new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker datePicker, int anio, int mes, int dia) {
@@ -91,6 +95,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
         newFragment.show(getSupportFragmentManager(), "datePicker");
+    }
+
+    public static void escondeTeclado(Activity activity){
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        View view = activity.getCurrentFocus();
+        if (view == null) {
+            view = new View(activity);
+        }
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
     @Override
