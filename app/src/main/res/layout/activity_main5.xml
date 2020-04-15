@@ -31,11 +31,11 @@
         android:id="@+id/btnRegresa3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="424dp"
-        android:layout_marginEnd="88dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="376dp"
         android:onClick="Regresar"
         android:text="@string/btnRegresa"
-        app:layout_constraintEnd_toStartOf="@+id/guideline15"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline13" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -45,17 +45,30 @@
         android:orientation="vertical"
         app:layout_constraintGuide_begin="198dp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="@color/Black"
-        android:textSize="28sp"
+    <EditText
+        android:id="@+id/etAnio"
+        android:layout_width="269dp"
+        android:layout_height="51dp"
+        android:background="@color/AliceBlue"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/feedbackname"
+        android:textAlignment="center"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline13"
-        app:layout_constraintVertical_bias="0.13999999" />
+        app:layout_constraintVertical_bias="0.291" />
 
+    <Button
+        android:id="@+id/btnLlenar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="104dp"
+        android:onClick="Consulta"
+        android:text="@string/btnLlenar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

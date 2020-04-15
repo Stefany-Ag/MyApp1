@@ -3,24 +3,24 @@ package com.example.myapp1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity4 extends AppCompatActivity {
-
-    //String mes = getIntent().getStringExtra(MainActivity.Mes);
-    //String dia = getIntent().getStringExtra(MainActivity.Dia);
-    EditText etTexto;
+    private EditText etDia;
+    String dataError;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
-        /*int diaN = Integer.parseInt(dia);
-        int mesN = Integer.parseInt(mes);
-        String signo = getSigno(mesN,diaN);
-        etTexto.append(signo);*/
+        etDia = (EditText) findViewById(R.id.etDia);
+        dataError=getResources().getString(R.string.dataError);
+
     }
 
     public static String getSigno(int mes, int dia){
@@ -112,6 +112,28 @@ public class MainActivity4 extends AppCompatActivity {
                 break;
         }
         return signo;
+    }
+    public void Consulta(View view)
+    {
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(MainActivity4.this, "registro",null,1);
+        SQLiteDatabase DataBase = admin.getWritableDatabase();
+        Cursor fila = DataBase.rawQuery("SELECT dia, mes FROM formulario", null);
+        if(fila.moveToFirst())
+        {
+            String varDia = fila.getString(0);
+            String varMes = fila.getString(1);
+            DataBase.close();
+
+            int mes = Integer.parseInt(varMes);
+            int dia = Integer.parseInt(varDia);
+            String zodiaco = getSigno(mes,dia);
+            etDia.setText(zodiaco);
+        }
+        else
+        {
+            Toast.makeText(MainActivity4.this, dataError, Toast.LENGTH_SHORT).show();
+            DataBase.close();
+        }
     }
     public void Regresar(View view)
     {

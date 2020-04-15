@@ -15,23 +15,6 @@
         app:layout_constraintGuide_begin="130dp" />
 
     <TextView
-        android:id="@+id/etTexto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:importantForAutofill="no"
-        android:text=""
-        android:textAlignment="center"
-        android:textColor="@color/MediumSpringGreen"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline12"
-        app:layout_constraintVertical_bias="0.052" />
-
-    <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,11 +32,39 @@
         android:id="@+id/btnRegresa2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="488dp"
-        android:layout_marginEnd="224dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="448dp"
         android:onClick="Regresar"
         android:text="@string/btnRegresa"
-        app:layout_constraintEnd_toEndOf="@+id/etTexto"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline12" />
+
+    <EditText
+        android:id="@+id/etDia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/AliceBlue"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/feedbackname"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline12"
+        app:layout_constraintVertical_bias="0.383" />
+
+    <Button
+        android:id="@+id/btnLlenar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="104dp"
+        android:onClick="Consulta"
+        android:text="@string/btnLlenar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

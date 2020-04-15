@@ -81,7 +81,7 @@
         android:inputType="text" />
 
     <EditText
-        android:id="@+id/etNombre"
+        android:id="@+id/etDia"
         android:layout_width="167dp"
         android:layout_height="40dp"
         android:clickable="true"
@@ -204,4 +204,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
+    <TextView
+        android:id="@+id/tvDia"
+        android:layout_width="53dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="116dp"
+        android:text="@string/tvDia"
+        app:layout_constraintEnd_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/guideline13" />
+
+    <TextView
+        android:id="@+id/tvMes"
+        android:layout_width="53dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="116dp"
+        android:text="@string/tvMes"
+        app:layout_constraintEnd_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toBottomOf="@+id/tvDia" />
+
+    <TextView
+        android:id="@+id/tvAnio"
+        android:layout_width="51dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="116dp"
+        android:text="@string/tvAnio"
+        app:layout_constraintEnd_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toBottomOf="@+id/tvMes" />
 </androidx.constraintlayout.widget.ConstraintLayout>

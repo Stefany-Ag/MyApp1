@@ -103,5 +103,4 @@
         android:text="@string/btnSalir"
         app:layout_constraintEnd_toStartOf="@+id/btnChino"
         app:layout_constraintTop_toTopOf="@+id/guideline9" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

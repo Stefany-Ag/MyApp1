@@ -2,7 +2,7 @@
 <resources>
     <string name="tvIntro">Welcome</string>
     <string name="btnListo">Ready</string>
-    <string name="btnRFC">TIN</string>
+    <string name="btnRFC">TIN and age</string>
     <string name="btnHoros">Zodiac Sign</string>
     <string name="btnChino">Chinese Year</string>
     <string name="tvRFC">Your TIN is:</string>
@@ -13,7 +13,7 @@
     <string name="tvHoros">Your zodiac sign is:</string>
     <string name="tvChino">Your chinese year is:</string>
     <string name="tvNombre">Name(s):</string>
-    <string name="feedbackname">Click here</string>
+    <string name="feedbackname">Click fill</string>
     <string name="tvApellidoPaterno">F. Last Name</string>
     <string name="tvApellidoMaterno">M. Last Name</string>
     <string name="tvFecha">Birthdate</string>
@@ -21,5 +21,12 @@
     <string name="error">Missing data</string>
     <string name="btnRegresa">Back</string>
     <string name="btnSalir">Repeat</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name= "btnLlenar">"Fill "</string>
+    <string name= "tvDia">Day</string>
+    <string name= "tvMes">Month</string>
+    <string name= "tvAnio">Year</string>
+    <string name="borrado">The DB be erased</string>
+    <string name="dberror">The DB can\'t be erased</string>
+    <string name="dataError">Data errors</string>
+    <string name="fechaError">" Date non-existent until today"</string>
 </resources>

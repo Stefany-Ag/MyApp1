@@ -34,26 +34,62 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="558dp" />
 
-    <TextView
-        android:id="@+id/tvDatoRFC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/Lime"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline10" />
-
     <Button
         android:id="@+id/btnRegresa1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="88dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
         android:onClick="Regresar"
         android:text="@string/btnRegresa"
-        app:layout_constraintEnd_toStartOf="@+id/tvDatoRFC"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline11" />
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="262dp"
+        android:layout_height="52dp"
+        android:autofillHints=""
+        android:background="@color/AliceBlue"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/feedbackname"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRFC"
+        app:layout_constraintVertical_bias="0.325" />
+
+    <EditText
+        android:id="@+id/etEdad"
+        android:layout_width="262dp"
+        android:layout_height="52dp"
+        android:autofillHints=""
+        android:background="@color/AliceBlue"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/feedbackname"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRFC"
+        app:layout_constraintVertical_bias="0.727" />
+
+    <Button
+        android:id="@+id/btnLlenar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="104dp"
+        android:onClick="Consulta"
+        android:text="@string/btnLlenar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
